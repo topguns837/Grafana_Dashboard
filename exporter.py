@@ -14,8 +14,10 @@ Handler = http.server.SimpleHTTPRequestHandler
 
 
 class CustomCollector(object):     ## Class for CustomCollector which helps us to use different metric types
+    
     def __init__(self):
         pass
+    
     def collect(self):
         server_status = 1     ## place the logic here to get the server status
         cpu_usage = 7
@@ -42,10 +44,7 @@ class CustomCollector(object):     ## Class for CustomCollector which helps us t
         value4.add_metric(['BATTERY'],battery)
 
 
-        
-        
-        #value.add_metric(['Fall'] ,fall)
-        #value.add_metric(['Smoke'], smoke)
+              
         yield value1
         yield value2
         yield value3
